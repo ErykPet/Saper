@@ -2,7 +2,10 @@ let Buttons=[];
 let n=0;
 let x;
 let o;
+let firstClick=false;
 restart();
+
+
 function restart(button)
 { 
     setTimeout(() => {
@@ -20,7 +23,7 @@ function start()
         for (let i = 0; i < n; i++) {
             for (let j = 0; j < n; j++) {
             Buttons[i][j].remove();
-            
+            firstClick = false;
             }
             
         }
@@ -42,7 +45,25 @@ function start()
         console.log();
         button.style.left = 84*i+window.screen.width/4+ "px";
         button.style.top = 84*j+20+"px";
-    }
+        button.addEventListener('contextmenu', function(ev) {
+            ev.preventDefault();
+            if(!button.classList.contains("clickedbutton") && firstClick)
+            {
+                if(!button.classList.contains("marked"))
+                {
+                    button.classList.remove("buttonc");
+                    button.classList.add("marked");
+                }else{
+                    button.classList.remove("marked");
+                    button.classList.add("buttonc");
+                }
+                
+            }
+
+            return false;
+        }, false);
+        
+        }
     }
     
     console.log(Buttons);
@@ -62,6 +83,7 @@ function FirstTimeClicked(button)
     B.push(Buttons[i-1][j-1]);
     B.push(Buttons[i][j+1]);
     B.push(Buttons[i][j-1]);
+    firstClick = true;
 
 for(let i=0;i<(n*n)*0.15;i++)
 {
@@ -101,11 +123,15 @@ function ButtonClicked(button)
     {  
         Show(button); 
     }else{
-        button.classList.remove("buttonc");
-        button.classList.add("BOMB");
-        console.log(button.classList);
-        console.log();
-        restart(button);
+        if(!button.classList.contains("marked"))
+        {
+            button.classList.remove("buttonc");
+            button.classList.add("BOMB");
+            console.log(button.classList);
+            console.log();
+            restart(button);
+        }
+        
     }
 }
 function Show(button)
