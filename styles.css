@@ -1,0 +1,104 @@
+body {
+	background-color: #171717;
+}
+.buttonc
+{
+    background-color: rgb(0, 94, 216);
+    border-radius:15px;
+    border: 3px solid rgb(0, 57, 132);
+
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    position: absolute;
+    
+    -webkit-box-shadow: inset 0px 0px 40px 2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 0px 40px 2px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 40px 2px rgba(66, 68, 90, 1);
+
+
+  
+}
+.buttonc:hover
+{
+    background-color: rgb(0, 128, 255);
+    -webkit-box-shadow: 0px 0px 60px 10px rgba(0, 128, 255);
+    -moz-box-shadow: 0px 0px 60px 10px rgba(0, 128, 255);
+    box-shadow: 0px 0px 60px 10px rgba(0, 128, 255);
+    animation-name: glow;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    border: 3px solid rgb(0, 128, 255);
+}
+@keyframes glow {
+    0%{
+    background-color: rgb(0, 94, 216);
+    -webkit-box-shadow: 0px 0px 60px 10px rgba(0, 128, 255,0);
+    -moz-box-shadow: 0px 0px 60px 10px rgba(0, 128, 255,255,0);
+     box-shadow: 0px 0px 60px 10px rgba(0, 128, 255,255,0);
+    border: 3px solid rgb(0, 57, 132); 
+    }
+    
+    100%{
+    background-color: rgb(0, 128, 255);
+    -webkit-box-shadow: 0px 0px 60px 10px rgba(0, 128, 255,1);
+    -moz-box-shadow: 0px 0px 60px 10px rgba(0, 128, 255,1);
+    box-shadow: 0px 0px 60px 10px rgba(0, 128, 255,1);
+    border: 3px solid rgb(0, 128, 255);
+    }
+}
+.clickedbutton
+{
+    background-color: rgb(255, 255, 255);
+    border-radius:15px;
+    border: 3px solid rgb(181, 181, 181);
+
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    position: absolute;
+    
+    -webkit-box-shadow: inset 0px 0px 40px 2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 0px 40px 2px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 40px 2px rgba(66, 68, 90, 1);
+
+
+  
+}
+.BOMB
+{
+    background-color: rgb(255, 0, 0);
+    border-radius:15px;
+    border: 3px solid rgb(255, 0, 0);
+
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 60px 20px rgb(255, 0, 0);
+    -moz-box-shadow: 0px 0px 60px 20px rgb(255, 0, 0);
+    box-shadow: 0px 0px 60px 20px rgb(255, 0, 0);
+}
+#TXT
+{
+    font-size: 80px;
+    color: rgb(69, 9, 174);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}
+#by
+{
+    font-size:20px;
+    padding: 8px;
+    color: rgb(69, 9, 174);
+}
